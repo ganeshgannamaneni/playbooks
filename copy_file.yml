@@ -1,0 +1,11 @@
+---
+- name: This playbook copying the file
+  hosts: webservers
+  become: true
+  tasks:
+  - name: copying the files from main server to nodes
+    copy:
+     src: /home/ansadmin/index.html
+     dest: /home/ansadmin
+     owner: hari
+     mode: 0755

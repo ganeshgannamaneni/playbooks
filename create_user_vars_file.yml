@@ -1,0 +1,14 @@
+---
+- name: creating user
+  hosts: all
+  become: true
+  
+  vars_files:
+  - /home/ansadmin/user.yml
+
+  tasks:
+  - name: creating a user {{user}}
+    user:
+     name: "{{user1}}"
+     state: present
+  

@@ -1,0 +1,8 @@
+---
+- name: creating a user kurra
+  hosts: all
+  become: true
+  tasks:
+  - name: display the user kurra
+    user: 
+     name: kurra
